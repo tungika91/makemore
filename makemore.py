@@ -545,7 +545,7 @@ class CharDataset(Dataset):
 def create_datasets(input_file):
 
     # preprocessing of the input text file
-    with open(input_file, 'r') as f:
+    with open(input_file, 'r',  encoding="utf8") as f:
         data = f.read()
     words = data.splitlines()
     words = [w.strip() for w in words] # get rid of any leading or trailing white space
